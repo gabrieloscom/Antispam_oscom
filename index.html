@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antispam_oscom_test</title>
+    <title>Contenido en Texto Plano</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: monospace;
+            white-space: pre;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // URL del archivo que deseas descargar
-        const fileUrl = './lista/lista.txt';
-
-        // Crear un enlace temporal y hacer clic para iniciar la descarga
-        function downloadFile(url) {
-            const anchor = document.createElement('a');
-            anchor.href = url;
-            anchor.download = ''; // Mantener vacío si deseas que use el nombre del archivo en la URL
-            document.body.appendChild(anchor);
-            anchor.click();
-            document.body.removeChild(anchor);
-        }
-
-        // Llamar a la función para iniciar la descarga al cargar la página
-        window.onload = function() {
-            downloadFile(fileUrl);
-        };
-    </script>
+    # Ejemplo de archivo TXT
+    
+186.0.154.0/24
+74.48.140.0/24
+150.95.20.0/24
+163.44.0.0/16
+172.233.96.0/24
+172.105.84.92
+145.239.199.112
+79.137.36.152
+54.37.8.141
+190.247.243.99
+51.38.177.129
+149.202.49.100
+54.37.11.202
+54.37.14.106
+    # Este archivo contiene direcciones IP bloqueadas.
 </body>
 </html>
