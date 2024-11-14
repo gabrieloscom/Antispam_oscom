@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <title>Spam_relay</title>
+    <title>Antispam_oscom_test</title>
 </head>
 <body>
-    <ul class="lista">
-        <li>186.0.154.0/24</li>
-        <li>74.48.140.0/24</li>
-        <li>150.95.20.0/24</li>
-        <li>163.44.0.0/16</li>
-        <li>172.233.96.0/24</li>
-        <li>172.105.84.92</li>
-        <li>145.239.199.112</li>
-        <li>79.137.36.152</li>
-        <li>54.37.8.141</li>
-        <li>190.247.243.99</li>
-        <li>51.38.177.129</li>
-        <li>54.37.14.106</li>
-        <li>149.202.49.100</li>
-        <li>54.37.11.202</li>
-        <li>54.37.11.163</li>
-        <li>54.37.0.0/16</li>
+    <script>
+        // URL del archivo que deseas descargar
+        const fileUrl = './lista/lista.txt';
 
-    </ul>
+        // Crear un enlace temporal y hacer clic para iniciar la descarga
+        function downloadFile(url) {
+            const anchor = document.createElement('a');
+            anchor.href = url;
+            anchor.download = ''; // Mantener vacío si deseas que use el nombre del archivo en la URL
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+        }
+
+        // Llamar a la función para iniciar la descarga al cargar la página
+        window.onload = function() {
+            downloadFile(fileUrl);
+        };
+    </script>
 </body>
 </html>
